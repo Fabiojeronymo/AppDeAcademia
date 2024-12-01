@@ -1,0 +1,209 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+  <!-- Foto de perfil -->
+  <ImageView
+      android:id="@+id/imageViewPerfil"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:background="@drawable/circle_background"
+      android:contentDescription="@string/foto_de_perfil"
+      android:scaleType="centerCrop"
+      android:clipToOutline="true"
+      android:outlineProvider="background"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Nome do usuário (dinâmico, abaixo da foto de perfil) -->
+  <TextView
+      android:id="@+id/textViewNome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/nome"
+      android:textSize="24sp"
+      android:textColor="@android:color/black"
+      app:layout_constraintTop_toBottomOf="@id/imageViewPerfil"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="8dp" />
+
+  <!-- Botão para alterar foto -->
+  <TextView
+      android:id="@+id/textViewAlterarPerfil"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/alterar_foto"
+      android:textSize="14sp"
+      android:textColor="@android:color/holo_blue_dark"
+      android:clickable="true"
+      android:focusable="true"
+      app:layout_constraintTop_toBottomOf="@id/textViewNome"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="4dp" />
+
+  <!-- Divisor entre a foto e os dados -->
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@android:color/darker_gray"
+      app:layout_constraintTop_toBottomOf="@id/textViewAlterarPerfil"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="16dp" />
+
+  <!-- Campo de entrada para editar o nome -->
+  <TextView
+      android:id="@+id/textViewTituloNome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/nome"
+      android:textSize="20sp"
+      android:textColor="@android:color/black"
+      app:layout_constraintTop_toBottomOf="@id/textViewAlterarPerfil"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp" />
+
+  <EditText
+      android:id="@+id/editTextNome"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:background="@null"
+      android:hint="@string/digite_seu_nome"
+      android:imeOptions="actionNext"
+      android:inputType="text"
+      android:textColor="#8A8989"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textViewTituloNome" />
+
+  <!-- Campo de entrada para idade -->
+  <TextView
+      android:id="@+id/textViewTituloIdade"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/idade"
+      android:textSize="20sp"
+      android:textColor="@android:color/black"
+      app:layout_constraintTop_toBottomOf="@id/editTextNome"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp" />
+
+  <EditText
+      android:id="@+id/editTextIdade"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/digite_sua_idade"
+      android:background="@null"
+      android:textColor="#8A8989"
+      android:textSize="20sp"
+      android:imeOptions="actionNext"
+      android:inputType="number"
+      app:layout_constraintTop_toBottomOf="@id/textViewTituloIdade"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="8dp" />
+
+  <!-- Campo de entrada para altura -->
+  <TextView
+      android:id="@+id/textViewTituloAltura"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/altura"
+      android:textSize="20sp"
+      android:textColor="@android:color/black"
+      app:layout_constraintTop_toBottomOf="@id/editTextIdade"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp" />
+
+  <EditText
+      android:id="@+id/editTextAltura"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/digite_sua_altura"
+      android:background="@null"
+      android:textColor="#8A8989"
+      android:textSize="20sp"
+      android:imeOptions="actionNext"
+      android:inputType="numberDecimal"
+      app:layout_constraintTop_toBottomOf="@id/textViewTituloAltura"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="8dp" />
+
+  <!-- Campo de entrada para peso -->
+  <TextView
+      android:id="@+id/textViewTituloPeso"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/peso"
+      android:textSize="20sp"
+      android:textColor="@android:color/black"
+      app:layout_constraintTop_toBottomOf="@id/editTextAltura"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp" />
+
+  <EditText
+      android:id="@+id/editTextPeso"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/digite_seu_peso"
+      android:background="@null"
+      android:textColor="#8A8989"
+      android:textSize="20sp"
+      android:imeOptions="actionNext"
+      android:inputType="numberDecimal"
+      app:layout_constraintTop_toBottomOf="@id/textViewTituloPeso"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="8dp" />
+
+  <!-- Texto para o percentual de gordura corporal (body fat) -->
+  <TextView
+      android:id="@+id/textViewBf"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/bf"
+      android:textSize="20sp"
+      app:layout_constraintTop_toBottomOf="@id/editTextPeso"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp" />
+
+  <!-- EditText para editar o percentual de gordura corporal -->
+  <EditText
+      android:id="@+id/editTextBf"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/digite_seu_bf"
+      android:background="@null"
+      android:textColor="#8A8989"
+      android:textSize="20sp"
+      android:imeOptions="actionNext"
+      android:inputType="numberDecimal"
+      android:autofillHints="bodyFat"
+      app:layout_constraintTop_toBottomOf="@id/textViewBf"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <Button
+      android:id="@+id/salvarButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="464dp"
+      android:background="#FBFBFB"
+      android:text="Salvar"
+      app:layout_constraintHorizontal_bias="0.515"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textViewNome" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

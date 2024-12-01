@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <string name="menu_treino">Treino</string>
+    <string name="menu_progresso">Progresso</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="titulo_treino">Meu Treino</string>
+    <string name="titulo_progresso">Meu Progresso</string>
+    <string name="titulo_perfil">Meu Perfil</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_sua_idade">Digite sua idade</string>
+    <string name="digite_sua_altura">Digite sua altura</string>
+    <string name="digite_seu_peso">Digite seu peso</string>
+    <string name="digite_seu_bf">Digite seu BF</string>
+    <string name="foto_de_perfil">Foto de perfil</string>
+    <string name="alterar_foto">Alterar foto</string>
+    <string name="nome">Nome</string>
+    <string name="idade">Idade</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="bf">BF</string>
+    <string name="salvar">Salvar</string>
+    <string name="titulo_treino_menu">Treino A</string>
+    <string name="seta_esquerda">Seta Esquerda</string>
+    <string name="seta_direita">Seta Direita</string>
+    <string name="nome_treino">Treino A</string>
+</resources>

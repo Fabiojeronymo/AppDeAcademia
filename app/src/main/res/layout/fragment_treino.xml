@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Título do fragmento -->
+    <TextView
+        android:id="@+id/tituloTreino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/titulo_treino_menu"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:padding="16dp" />
+
+    <!-- Seletor de Treino -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/setaEsquerda"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/seta_esquerda"
+            android:src="@drawable/seta_treino_esq" />
+
+        <TextView
+            android:id="@+id/nomeTreino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/titulo_treino_menu"
+            android:textSize="24sp"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/setaDireita"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/seta_treino_dir"
+            android:contentDescription="@string/seta_direita" />
+    </LinearLayout>
+
+    <!-- RecyclerView para os exercícios -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExercicios"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:padding="16dp" />
+
+</LinearLayout>
