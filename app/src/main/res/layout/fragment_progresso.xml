@@ -1,10 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProgressoFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- CheckBox para marcar se compareceu -->
+    <CheckBox
+        android:id="@+id/checkCompareceu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compareceu à academia?" />
+
+    <!-- EditText para o nome do exercício -->
+    <EditText
+        android:id="@+id/editExercicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do exercício"
+        android:inputType="text" />
+
+    <!-- EditText para a evolução de carga -->
+    <EditText
+        android:id="@+id/editEvolucaoCarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Evolução de carga"
+        android:inputType="number" />
+
+    <!-- Botão para salvar o progresso -->
+    <Button
+        android:id="@+id/btnSalvarProgresso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar Progresso" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dias que Compareceu:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Lista de dias de comparecimento -->
+    <ListView
+        android:id="@+id/listDiasComparecimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Título para a lista de cargas -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cargas:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Lista de cargas e exercícios -->
+    <ListView
+        android:id="@+id/listCargas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
